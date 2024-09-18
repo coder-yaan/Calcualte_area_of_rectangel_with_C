@@ -1,11 +1,15 @@
 #include <stdio.h>
 
+//clearing input buffer
+
+//First method, clears input buffer when the condition comes.
 void clear_input_buffer_m1()
 {
     int input_buffer;
     while ((input_buffer = getchar()) != '\n' && input_buffer != EOF);
 }
 
+//Second method, recommended because it clears the input buffer at least one time without checking the condition.
 void clear_input_buffer_m2()
 {
     int input_buffer;
@@ -15,11 +19,15 @@ void clear_input_buffer_m2()
 
     } while (input_buffer != '\n' && input_buffer != EOF);
 }
-
+ 
+//main function
 int main()
 {
+    //declaring variables
     float area, len, width;
-    int value;
+    int value; 
+
+    //generating a while loop for getting length input under certain conditions
     while (1)
     {
         printf("\n Enter the length of the rectangle : ");
@@ -40,9 +48,12 @@ int main()
         }
         else
         {
+            //this break exits the loop after getting the desired results
             break;
         }
     }
+
+    //generating a while loop for getting width input under certain conditions.
     while (1)
     {
         printf("\n Enter the width of the rectangle : ");
@@ -62,6 +73,7 @@ int main()
         }
         else
         {
+            //this break exits the loop after getting the desired results
             break;
         }
     }
